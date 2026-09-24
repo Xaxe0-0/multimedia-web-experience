@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Web Experience</title>
+    <link rel="stylesheet" href="ui-ux-design.css">
+</head>
+<body>
+
+    <header>
+        <div class="university-brand">
+            <img src="/images/OIP.webp" alt="University of La Salette Logo">
+            <h2>University of La Salette</h2>
+        </div>
+
+        <nav>
+            <a href="#Home">Home</a>
+            <a href="#media">Media</a>
+            <a href="#about">About</a>
+            <a href="https://www.uls.edu.ph" target="_blank" class="ext-link">
+                ULS Site
+            </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="Home">
+            <h1>College of Information Technology</h1>
+
+            <p>
+                Welcome to the College of Information Technology at the
+                University of La Salette. Explore our programs and discover
+                how we prepare students for successful careers in the tech industry.
+            </p>
+        </section>
+
+        <section id="media">
+
+            <div class="main-container">
+
+                <div class="content">
+
+                    <div class="CIT-logo">
+                        <img src="/images/67535025_2383251898625794_1961697016476073984_n.png" alt="CIT Logo">
+
+                        <div class="text">
+                            <span>Reconcilers</span>
+                            <h3>Multimedia Web Experience</h3>
+                        </div>
+                    </div>
+
+                    <h2 class="content-heading">
+                        Student Multimedia Showcase
+                    </h2>
+
+                    <p class="content-description">
+                        Discover the creative works of our students in the
+                        field of multimedia and web development.
+                    </p>
+
+                    <ul class="features">
+                        <li class="feature-item">
+                            <span>High resolution graphic designs</span>
+                        </li>
+
+                        <li class="feature-item">
+                            <span>Promotional motion video reels</span>
+                        </li>
+
+                        <li class="feature-item">
+                            <span>Interactive web presentations</span>
+                        </li>
+                    </ul>
+
+                    <button class="btn" onclick="showMessage()">
+                        Show Welcome Message
+                    </button>
+
+                </div>
+
+                <div class="media-container">
+
+                    <div class="tabs">
+                        <button
+                            class="tab active"
+                            onclick="filterMedia('all', this)">
+                            All
+                        </button>
+
+                        <button
+                            class="tab"
+                            onclick="filterMedia('image', this)">
+                            Images
+                        </button>
+
+                        <button
+                            class="tab"
+                            onclick="filterMedia('video', this)">
+                            Videos
+                        </button>
+                    </div>
+
+                    <div class="media-contents">
+
+                        <div class="images" data-type="image">
+                            <div class="images-information">
+                                <span>Infographic poster about Advanced Database</span>
+                            </div>
+
+                            <img
+                                src="images/ads-tarpaulin (2).png"
+                                alt="Student multimedia project 1">
+                        </div>
+
+                        <div class="images" data-type="image">
+                            <div class="images-information">
+                                <span>Second year student project about e commerce businesses</span>
+                            </div>
+
+                            <img
+                                src="images/Screenshot (660).png"
+                                alt="Student multimedia project 2">
+                        </div>
+
+                        <div class="images" data-type="image">
+                            <div class="images-information">
+                                <span>Current year student project about system integration</span>
+                            </div>
+
+                            <img
+                                src="images/Screenshot (620).png"
+                                alt="Student multimedia project 3">
+                        </div>
+
+                            <div class="images" data-type="video">
+                                <div class="images-information">
+                                <span>Explainer Video: ABON Connection of Route, Controller, and Views</span>
+                                </div>
+
+                                <video controls preload="metadata">
+                                    <source src="video/ABON-connection-of-route-controller-views.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video playback.
+                            </video>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about">
+
+            <div class="about-container">
+
+                <h2>About the College of Information Technology</h2>
+
+                <p>
+                    The College of Information Technology provides students
+                    with knowledge and skills in programming, multimedia,
+                    networking, databases, web development, and other areas
+                    of information technology.
+                </p>
+
+                <p>
+                    This multimedia showcase presents sample creative works
+                    and projects created by students.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="modal" class="modal">
+
+        <div class="modal-box">
+
+            <h3>Welcome!</h3>
+
+            <p>
+                Welcome to the ULS College of Information Technology
+                Student Multimedia Showcase portal!
+            </p>
+
+            <button class="btn" onclick="closeMessage()">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>
+            © 2026 ULS College of Information Technology Council |
+            University of La Salette, Inc.
+        </p>
+
+    </footer>
+
+    <script>
+
+        function showMessage() {
+            document.getElementById("modal").style.display = "flex";
+        }
+
+        function closeMessage() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        function filterMedia(category, btn) {
+
+            const tabs = document.querySelectorAll(".tab");
+
+            tabs.forEach(function(tab) {
+                tab.classList.remove("active");
+            });
+
+            btn.classList.add("active");
+
+            const mediaItems = document.querySelectorAll(".images");
+
+            mediaItems.forEach(function(item) {
+
+                const itemType = item.getAttribute("data-type");
+
+                if (category === "all" || itemType === category) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+
+            });
+        }
+
+        window.onclick = function(event) {
+
+            const modal = document.getElementById("modal");
+
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>

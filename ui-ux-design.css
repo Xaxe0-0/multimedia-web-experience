@@ -1,0 +1,522 @@
+:root {
+    --bg: #0b0716;
+    --container-bg: #140e28;
+    --container-border: #2e1d52;
+    --violet: #a855f7;
+    --violet-glow: #8b5cf6;
+    --violet-light: #c084fc;
+    --violet-dark: #3b0764;
+    --text-light: #f3f4f6;
+    --text: #a78bfa;
+    --text-sub: #94a3b8;
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-light);
+    background-image:
+        linear-gradient(
+            rgba(11, 7, 22, 0.82),
+            rgba(11, 7, 22, 0.82)
+        ),
+        url("images/557591071_1098946659061230_4178401433679973366_n.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(20, 14, 40, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--container-border);
+    padding: 18px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.university-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.university-brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.university-brand h2 {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-sub);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.25s ease;
+}
+
+nav a:hover {
+    color: var(--violet-light);
+}
+
+.ext-link {
+    border: 1px solid var(--violet);
+    padding: 6px 14px;
+    border-radius: 8px;
+    color: var(--violet-light);
+    background-color: rgba(168, 85, 247, 0.1);
+    transition: all 0.25s ease;
+}
+
+.ext-link:hover {
+    background-color: var(--violet);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 35px auto;
+    flex: 1;
+}
+
+#Home {
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 35px 25px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(24, 16, 51, 0.9) 0%,
+            rgba(16, 10, 36, 0.9) 100%
+        );
+    border: 1px solid var(--container-border);
+    border-top: 3px solid var(--violet);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#Home h1 {
+    font-size: 2.1rem;
+    color: #ffffff;
+    margin-bottom: 12px;
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        var(--violet-light)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#Home p {
+    color: var(--text-sub);
+    font-size: 0.98rem;
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.content {
+    background-color: rgba(20, 14, 40, 0.9);
+    border: 1px solid var(--container-border);
+    border-top: 3px solid var(--violet);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+.CIT-logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--container-border);
+}
+
+.CIT-logo img {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid var(--violet);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+.CIT-logo .text span {
+    background-color: rgba(168, 85, 247, 0.15);
+    color: var(--violet-light);
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.CIT-logo .text h3 {
+    color: #ffffff;
+    font-size: 1.15rem;
+    margin-top: 5px;
+}
+
+.content-heading {
+    color: #ffffff;
+    font-size: 1.45rem;
+    margin-bottom: 10px;
+}
+
+.content-description {
+    color: var(--text-sub);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-item {
+    background-color: rgba(11, 7, 22, 0.6);
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    border: 1px solid rgba(46, 29, 82, 0.8);
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.feature-item:hover {
+    border-color: var(--violet);
+    transform: translateX(3px);
+}
+
+.btn {
+    width: 100%;
+    background:
+        linear-gradient(
+            135deg,
+            var(--violet) 0%,
+            var(--violet-glow) 100%
+        );
+    color: #ffffff;
+    border: none;
+    padding: 13px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-top: auto;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.btn:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #c084fc 0%,
+            var(--violet) 100%
+        );
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+}
+
+.media-container {
+    background-color: rgba(20, 14, 40, 0.9);
+    border: 1px solid var(--container-border);
+    border-top: 3px solid var(--violet);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    background-color: rgba(11, 7, 22, 0.8);
+    color: var(--text-sub);
+    border: 1px solid var(--container-border);
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.tab.active,
+.tab:hover {
+    background-color: var(--violet);
+    color: #ffffff;
+    border-color: var(--violet);
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+}
+
+.media-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.images {
+    background-color: #0b0716;
+    border: 1px solid var(--container-border);
+    border-radius: 12px;
+    padding: 14px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.images:hover {
+    border-color: rgba(168, 85, 247, 0.5);
+    transform: translateY(-2px);
+}
+
+.images-information {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.images img,
+.images video {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#about {
+    margin-top: 35px;
+}
+
+.about-container {
+    background-color: rgba(20, 14, 40, 0.9);
+    border: 1px solid var(--container-border);
+    border-top: 3px solid var(--violet);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.about-container h2 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.about-container p {
+    color: var(--text-sub);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about-container p:last-child {
+    margin-bottom: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.modal-box {
+    background-color: var(--container-bg);
+    border: 1px solid var(--container-border);
+    padding: 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(168, 85, 247, 0.2);
+}
+
+.modal-box h3 {
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.modal-box p {
+    color: var(--text-sub);
+    font-size: 0.92rem;
+    margin-bottom: 22px;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: rgba(20, 14, 40, 0.9);
+    border-top: 1px solid var(--container-border);
+    text-align: center;
+    padding: 20px;
+    color: var(--text-sub);
+    font-size: 0.85rem;
+    margin-top: 40px;
+}
+
+@media (max-width: 850px) {
+
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    header {
+        padding: 16px;
+    }
+
+    .university-brand {
+        justify-content: center;
+    }
+
+    .university-brand img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .university-brand h2 {
+        font-size: 1rem;
+    }
+
+    nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+    #Home {
+        padding: 25px 18px;
+    }
+
+    #Home h1 {
+        font-size: 1.6rem;
+    }
+
+    .content,
+    .media-container,
+    .about-container {
+        padding: 20px;
+    }
+
+    .CIT-logo {
+        gap: 10px;
+    }
+
+    .CIT-logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .content-heading {
+        font-size: 1.25rem;
+    }
+
+    .images-information {
+        font-size: 0.8rem;
+    }
+
+}
+.images video {
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: contain;
+    background-color: #000000;
+    border-radius: 8px;
+}
