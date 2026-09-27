@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multimedia Web Experience</title>
     <link rel="stylesheet" href="ui-ux-design.css">
+    <script src = "script.js"></script>
 </head>
 <body>
 
@@ -27,7 +28,7 @@
     <main>
 
         <section id="Home">
-            <h1>College of Information Technology</h1>
+            <a href="https://www.facebook.com/ulscitcouncil"><h1>College of Information Technology</h1></a>
 
             <p>
                 Welcome to the College of Information Technology at the
@@ -134,6 +135,27 @@
                                 alt="Student multimedia project 3">
                         </div>
 
+                        <div class="images" data-type="image">
+                            <div class="images-information">
+                                <span>Welcome, Freshmen!</span>
+                            </div>
+
+                            <img
+                                src="images/Welcoming-freshmen.jpg"
+                                alt="Student multimedia project 4">
+                        </div>
+
+                        <div class="images" data-type="image">
+                            <div class="images-information">
+                                <span>winning 2nd Place during the 2026 CV Regional Science Technology and Digital Innovation Week 
+                                    e-sports Game Dev Challenge 2026. </span>
+                            </div>
+
+                            <img
+                                src="images/CIT-gamedev-compi.jpg"
+                                alt="Student multimedia project 5">
+                        </div>
+
                             <div class="images video-item" data-type="video">
                                 <div class="images-information">
                                     <span>Explainer Video: ABON Connection of Route, Controller, and Views</span>
@@ -142,6 +164,28 @@
                                     <video controls preload="metadata" width="100%"playsinline> 
                                          <source
                                                 src="./video/optimized-video.mp4" type="video/mp4">
+                                                     Your browser does not support HTML5 video playback.
+                                     </video>
+                                </div>
+                            <div class="images video-item" data-type="video">
+                                <div class="images-information">
+                                    <span>Explainer Video: ABON Connection of Route, Controller, and Views</span>
+                                </div>
+
+                                    <video controls preload="metadata" width="100%"playsinline> 
+                                         <source
+                                                src="./video/promotional-video1.mp4" type="video/mp4">
+                                                     Your browser does not support HTML5 video playback.
+                                     </video>
+                                </div>
+                            <div class="images video-item" data-type="video">
+                                <div class="images-information">
+                                    <span>Explainer Video: ABON Connection of Route, Controller, and Views</span>
+                                </div>
+
+                                    <video controls preload="metadata" width="100%"playsinline> 
+                                         <source
+                                                src="./video/promotional-video2.mp4" type="video/mp4">
                                                      Your browser does not support HTML5 video playback.
                                      </video>
                                 </div>
@@ -204,53 +248,6 @@
         </p>
 
     </footer>
-
-    <script>
-
-        function showMessage() {
-            document.getElementById("modal").style.display = "flex";
-        }
-
-        function closeMessage() {
-            document.getElementById("modal").style.display = "none";
-        }
-
-        function filterMedia(category, btn) {
-
-            const tabs = document.querySelectorAll(".tab");
-
-            tabs.forEach(function(tab) {
-                tab.classList.remove("active");
-            });
-
-            btn.classList.add("active");
-
-            const mediaItems = document.querySelectorAll(".images");
-
-            mediaItems.forEach(function(item) {
-
-                const itemType = item.getAttribute("data-type");
-
-                if (category === "all" || itemType === category) {
-                    item.style.display = "block";
-                } else {
-                    item.style.display = "none";
-                }
-
-            });
-        }
-
-        window.onclick = function(event) {
-
-            const modal = document.getElementById("modal");
-
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-
-        };
-
-    </script>
 
 </body>
 </html>
